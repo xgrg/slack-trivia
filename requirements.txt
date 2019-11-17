@@ -1,6 +1,2 @@
-tornado>=5.1
-pandas>=0.24
-coverage>=4.5
-coveralls
-xlrd
-xlwt
+schedule
+slack

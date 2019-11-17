@@ -1,0 +1,73 @@
+[
+  [
+    "If a person is 80 years old, APOE4 carrier and amyloid negative,is she/he resistant or resilience?",
+    [
+      "resistant",
+      "resilient"
+    ],
+    0,
+    "earenaza"
+  ],
+  [
+    "If a participant is amyloid positive but doing pretty well in cognitive  tests, is she/he resistant or resilience?",
+    [
+      "resistant to amyloid",
+      "resilient to amyloid"
+    ],
+    1,
+    "earenaza"
+  ],
+  [
+    "If a person is amyloid positive and showing preserved gray matter volume,this phenomenon is",
+    [
+      "resistance to amyloid",
+      "resilience to amyloid",
+      "resistance to tau",
+      "2 and 3 are possible"
+    ],
+    3,
+    "earenaza"
+  ],
+  [
+    "If a person is coping with amyloid (ex. maintaining cognitive performance)because she/he started with a 'better' brain... is this",
+    [
+      "reserve",
+      "resilience",
+      "resistance",
+      "1 and 2 are possible"
+    ],
+    3,
+    "earenaza"
+  ],
+  [
+    "If we see increased functional activation with increasing amyloid that translates in a cognitive benefit ... is this..",
+    [
+      "cognitive reserve",
+      "resilience",
+      "brain maintenance",
+      "1 and 2 are correct"
+    ],
+    3,
+    "earenaza"
+  ],
+  [
+    "What is resillience?",
+    [
+      "an umbrella term that encompasses several mechanisms that allow coping with pathology and minimizing the effects of pathology",
+      "a brain response to pathology that minimizes the effects of pathology on cognition"
+    ],
+    1,
+    "earenaza"
+  ],
+  [
+    "How can we study resilience mechanisms?",
+    [
+      "only in the face of pathology",
+      "only with fMRI approaches",
+      "only with lifespan approaches",
+      "all are false"
+    ],
+    3,
+    "earenaza"
+  ]
+]

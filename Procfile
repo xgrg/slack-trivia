@@ -1,1 +1,1 @@
-web: python server.py --port $PORT
+web: python quizz.py &; python cron.py quizztest
