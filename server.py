@@ -33,13 +33,14 @@ class PostHandler(BaseHandler):
         self.set_header("Content-Type", 'application/json')
 
     def post(self):
+        s = j = json.dumps({ k: self.get_argument(k) for k in self.request.arguments })
         j = {
             "blocks": [
                 {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "*It's 80 degrees right now.*"
+                        "text": "*It's 80 degrees right now. %s*"%s
                     }
                 },
                 {
