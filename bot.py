@@ -4,8 +4,8 @@ import json, random
 
 def on_reply(payload, trivia):
     data, sender = trivia.get_params(payload)
+    print('REPLY from %s'%sender)
 
-    print('PENDING QUESTION: ANSWER DETECTED')
     reply = data['text'].upper()
     index = 'ABCDEFGH'.index(reply)
     text, options, correct, author = trivia.pending_question
@@ -17,14 +17,20 @@ def on_reply(payload, trivia):
         payload = create_question(text, options, author)
         response = trivia.post(payload, sender)
         return
+    elif sender in [r[0] for r in trivia.replies]:
+        msg = 'Your answer was already registered. Please wait for the solution.'
+        response = trivia.post_text(msg, sender)
+        return
 
     reply = create_reply(text, options, correct, reply, author)
-    r = [data['user'], index==correct, index]
+    r = [sender, index==correct, index]
     trivia.replies.append(r)
+    trivia.dump()
 
     response = trivia.post(reply, sender)
 
 def on_next(payload, trivia):
+    print('NEXT')
     data, sender = trivia.get_params(payload)
 
     user = get_user_id(trivia.webclient, 'goperto')
@@ -58,6 +64,7 @@ def on_next(payload, trivia):
 
     trivia.replies = []
     trivia.pending_question = None
+    trivia.dump()
 
     payload = display_scores(trivia.scores, trivia.table)
     response = trivia.post(payload, channel)
@@ -66,17 +73,24 @@ def on_next(payload, trivia):
 
 
 def on_quizz(payload, trivia):
-
+    print('QUIZZ')
     data, sender = trivia.get_params(payload)
 
     trivia.table = get_users_table(trivia.webclient)
-    user = get_user_id(trivia.webclient, "goperto")
-
-    if user != data['user']:
-        print('User %s not authorized'%trivia.table[sender])
+    # user = get_user_id(trivia.webclient, "goperto")
+    # user1 = get_user_id(trivia.webclient, "quizzbot")
+    #
+    # if not sender in [user, user1]:
+    #     print(sender)
+    #     print('User %s not authorized'%trivia.table[sender])
 
     questions = json.loads(''.join(open('questions.json').read().split('\n')))
+
     qno = random.randrange(0, len(questions))
+    while qno == trivia.previous:
+        qno = random.randrange(0, len(questions))
+    trivia.previous = qno
+
     text, options, correct, author = questions[qno]
 
     payload = create_question(text, options, author)
@@ -92,10 +106,11 @@ def on_quizz(payload, trivia):
 
     trivia.pending_question = questions[qno]
     channel, ts = response['channel'], response['ts']
+    #trivia.dump()
 
 
 def on_ping(payload, trivia):
-
+    print('PING')
     data, sender = trivia.get_params(payload)
 
     text, options, correct, author = trivia.pending_question
@@ -105,6 +120,7 @@ def on_ping(payload, trivia):
 
 
 def on_create(payload, trivia):
+    print('CREATE')
     data, sender = trivia.get_params(payload)
     if not hasattr(trivia, 'table'):
         trivia.table = get_users_table(trivia.webclient)
@@ -113,9 +129,16 @@ def on_create(payload, trivia):
         text = data['text'].split('!create ')[1]
         question = text.split('[')[0]
         options = text[text.index('[') + 1: text.index(']')].split(',')
-        index = int(text[text.index(']') +1:].strip(' '))
+        correct = text[text.index(']') +1:].strip(' ')
+        try:
+            index = int(correct)
+            correct = options[index]
+        except ValueError:
+            letters = ['a','b','c','d','e','f','g']
+            if correct.lower() in letters:
+                correct = options[letters.index(correct.lower())]
         payload = create_question(question, options, sender)
-        correct = options[index]
+
         letter = 'ABCDEFGH'[index]
         msg = 'Correct answer is *%s. %s*'%(letter, correct)
         response = trivia.post(payload, sender)
@@ -139,3 +162,8 @@ def on_create(payload, trivia):
     json.dump(questions, open('questions.json', 'w'), indent=2)
     msg = 'Question has been correctly registered! Question #%s.'%len(questions)
     response = trivia.post_text(msg, sender)
+
+def on_json(payload, trivia):
+    print('JSON')
+    data, sender = trivia.get_params(payload)
+    trivia.webclient.files_upload(file='questions.json', channels='@goperto')

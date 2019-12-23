@@ -23,7 +23,7 @@
       "resistance to amyloid",
       "resilience to amyloid",
       "resistance to tau",
-      "2 and 3 are possible"
+      "B and C are possible"
     ],
     3,
     "earenaza"
@@ -34,7 +34,7 @@
       "reserve",
       "resilience",
       "resistance",
-      "1 and 2 are possible"
+      "A and B are possible"
     ],
     3,
     "earenaza"
@@ -45,7 +45,7 @@
       "cognitive reserve",
       "resilience",
       "brain maintenance",
-      "1 and 2 are correct"
+      "A and B are correct"
     ],
     3,
     "earenaza"
@@ -69,5 +69,1875 @@
     ],
     3,
     "earenaza"
+  ],
+  [
+    "The following are named parts of the corpus callosum EXCEPT... ",
+    [
+      "body",
+      "genu",
+      "infundibulum",
+      "rostrum",
+      "splenium"
+    ],
+    2,
+    "goperto"
+  ],
+  [
+    "What lies directly above the tentorium?",
+    [
+      "The parietal lobes",
+      "The temporal lobes.",
+      "The occipital lobes.",
+      "The frontal lobes.",
+      "The cerebellum"
+    ],
+    2,
+    "goperto"
+  ],
+  [
+    "The brainstem is formed of:",
+    [
+      "Medulla oblongata.",
+      "Midbrain.",
+      "Pons.",
+      "All of the above.",
+      "None of the above."
+    ],
+    3,
+    "goperto"
+  ],
+  [
+    "Association fibers include all of the following EXCEPT:",
+    [
+      "Corpus callosum.",
+      "Superior longitudinal fasciculus.",
+      "Inferior longitudinal fasciculus.",
+      "Cingulum.",
+      "Fasciculus uncinatus."
+    ],
+    0,
+    "goperto"
+  ],
+  [
+    "Regarding Corpus callosum all of the following are correct EXCEPT:",
+    [
+      "It connects similar cortical areas of the two hemispheres.",
+      "It is supplied by the anterior cerebral artery.",
+      "It is formed of association fibers.",
+      "It transmits information between the 2 hemispheres.",
+      "The posterior end is called the splenium."
+    ],
+    2,
+    "goperto"
+  ],
+  [
+    "Which is the largest subfield in hippocampal anatomy?",
+    [
+      "subiculum",
+      "CA1",
+      "CA4",
+      "dentate gyrus"
+    ],
+    1,
+    "goperto"
+  ],
+  [
+    "Which of these does not refer to hippocampal anatomy?",
+    [
+      "dentate gyrus",
+      "parasubiculum",
+      "BA36",
+      "CA2"
+    ],
+    2,
+    "goperto"
+  ],
+  [
+    "Which of these tools cannot be used for hippocampal subfield segmentation",
+    [
+      "MAGeT-Brain",
+      "FreeSurfer",
+      "FSL",
+      "ASHS"
+    ],
+    2,
+    "goperto"
+  ],
+  [
+    "The equilibrium potential for K+ in neurons is ordinarily nearest\u2013",
+    [
+      "the equilibrium potential for Na+",
+      "resting potential",
+      "reversal potential for the EPSP",
+      "the peak of the action potential"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "ATP provides an essential energy source in the CNS for\u2013",
+    [
+      "division of neurons",
+      "maintenance of ionic gradients via ATPase",
+      "generation of action potentials",
+      "EPSPs and IPSPs"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The peripheral nervous system\u2013",
+    [
+      "includes the spinal cord",
+      "is sheathed in fluid-filled spaces enclosed by membranes",
+      "includes cranial nerves",
+      "does not include spinal nerves",
+      "is surrounded by bone"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The somatic nervous system innervates the\u2013",
+    [
+      "blood vessels of the skin",
+      "blood vessels of the brain",
+      "muscles of the heart",
+      "muscles of the body wall",
+      "muscles of the viscera"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Myelin is produced by\u2013",
+    [
+      "oligodendrocytes in the CNS and Schwann cells in the PNS",
+      "Schwann cells in the CNS and oligodendrocytes in the PNS",
+      "oligodendrocytes in both CNS and PNS",
+      "Schwann cells in both CNS and PNS"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Astrocytes\u2013\n1. may function to buffer extracellular K+\n2. are interconnected by gap junctions\n3. can proliferate to form a scar after an injury\n4. migrate to the CNS from bone marrow\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The cell layer around the central canal of the spinal cord\u2013\n1. is called the ventricular zone\n2. is the same as the pia\n3. encloses cerebrospinal fluid\n4. is called the marginal zone\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "A spinal motor neuron in an adult\u2013\n1. maintains its membrane potential via the active transport of sodium and potassium ions\n2. synthesizes protein only in the cell body and not in the axon\n3. does not synthesize DNA for mitosis\n4. does not regenerate its axon following section of its peripheral portion\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The cell body of most neurons\u2013\n1. cannot divide in the adult\n2. is the main site of protein synthesis in the neuron\n3. is the site of the cell nucleus\n4. contains synaptic vesicles\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The myelin sheath is\u2013\n1. produced within the CNS by oligodendrocytes\n2. produced within the peripheral nervous system by Schwann cells\n3. interrupted periodically by the nodes of Ranvier\n4. composed of spirally wrapped plasma membrane\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "Most synaptic terminals of axons that form chemical synapses in the CNS contain\u2013\n1. synaptic vesicles\n2. presynaptic densities\n3. neurotransmitter(s)\n4. rough endoplasmic reticulum\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Na, K-ATPase\u2013\n1. utilizes ATP\n2. acts as an ion pump\n3. maintains the gradients of Na and K ions across neuronal membranes\n4. consumes more than 25% of cerebral energy production\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "In axoplasmic transport\u2013\n1. some macromolecules move away from the cell body at rates of several centimeters per\nday\n2. mitochondria move along the axon\n3. microtubules seem to be involved\n4. some types of molecules move toward the cell body at rates of up to 300 mm per day\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "Neurotransmitters found in the brain stem include\u2013\n1. acetylcholine\n2. norepinephrine\n3. dopamine\n4. serotonin\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The brain stem includes\u2013\n1. the midbrain (mesencephalon)\n2. pons\n3. medulla oblongata\n4. telencephalon\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Glutamate\u2013\n1. is the transmitter at the neuromuscular junction\n2. may be involved in excitotoxicity\n3. is a major inhibitory transmitter in the CNS\n4. is a major excitatory transmitter in the CNS\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Glutamate\u2013\n1. is the transmitter at the neuromuscular junction\n2. may be involved in excitotoxicity\n3. is a major inhibitory transmitter in the CNS\n4. is a major excitatory transmitter in the CNS\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "A ganglion is defined as a\u2013\n1. part of the basal ganglia\n2. group of nerve cell bodies within the hypothalamus\n3. layer of similar cells in the cerebral cortex\n4. group of nerve cell bodies outside the neuraxis\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Norepinephrine is found in the\u2013\n1. sympathetic nervous trunk\n2. locus ceruleus\n3. lateral tegmentum of the midbrain\n4. neuromuscular junction\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The lateral column of the spinal cord contains the\u2013",
+    [
+      "lateral corticospinal tract",
+      "direct corticospinal tract",
+      "Lissauer's tract",
+      "gracile tract"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Decussations are\u2013\n1. aggregates of tracts\n2. fiber bundles in a spinal nerve\n3. horizontal connections crossing within the CNS from the dominant to nondominant side\n4. vertical connections crossing within the CNS from left to right or vice versa\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "The following fiber systems in the spinal cord are ascending tracts except for the\u2013",
+    [
+      "cuneate tract",
+      "ventral spinocerebellar tract",
+      "spinothalamic tract",
+      "spinoreticular tract",
+      "reticulospinal tract"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The neurotransmitter dopamine\u2013\n1. is produced by neurons that project from the substantia nigra to the caudate and putamen\n2. mediates transmission at the neuromuscular junction\n3. is depleted in Parkinson's disease\n4. is the major excitatory transmitter in the CNS\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Fine-diameter dorsal root axons of L5 on one side terminate in the\u2013\n1. marginal layer of the ipsilateral dorsal horn\n2. ipsilateral substantia gelatinosa\n3. ipsilateral lamina V of the dorsal horn\n4. ipsilateral dorsal nucleus (of Clarke)\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "A sign of an upper-motor-neuron lesion in the spinal cord is\u2013",
+    [
+      "severe muscle atrophy",
+      "hyperactive deep tendon reflexes",
+      "flaccid paralysis",
+      "absence of pathologic reflexes",
+      "absence of withdrawal responses"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Axons in the spinothalamic tracts decussate\u2013",
+    [
+      "in the medullary decussation",
+      "in the medullary lemniscus",
+      "within the spinal cord, five to six segments above the level where they enter",
+      "within the spinal cord, within one to two segments of the level where they enter",
+      "in the medial lemniscus"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "A patient complains of unsteadiness. Examination shows a marked diminution of position\nsense, vibration sense, and stereognosis of all extremities. He is unable to stand without\nwavering for more than a few seconds when his eyes are closed. There are no other abnormal\nfindings. The lesion most likely involves the\u2013",
+    [
+      "lateral columns of the spinal cord, bilaterally",
+      "inferior cerebellar peduncles, bilaterally",
+      "dorsal columns of the spinal cord, bilaterally",
+      "spinothalamic tracts, bilaterally",
+      "corticospinal tracts"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Axons in the spinothalamic tract\u2013\n1. carry information about pain and temperature (lateral spinothalamic tract) and light touch\n(anterior spinothalamic tract)\n2. carry information about pain (lateral spinothalamic tract) and temperature (anterior\nspinothalamic tract)\n3. decussate within the spinal cord, within one or two segments of their origin\n4. synapse in the gracile and cuneate nuclei\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The subclavian artery gives rise directly to the\u2013",
+    [
+      "lumbar radicular artery",
+      "great ventral radicular artery",
+      "anterior spinal artery",
+      "vertebral artery"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "The dorsal nucleus (of Clarke) in the spinal cord\u2013",
+    [
+      "receives contralateral input from dorsal root ganglia",
+      "terminates at the L2 segment",
+      "terminates in the midbrain",
+      "terminates in the ipsilateral cerebellum",
+      "receives fibers from the external cuneate nucleus"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "The following rules about dermatomes are correct\u2013\n1. the C4 and T2 dermatomes are contiguous over the anterior trunk\n2. the nipple is at the level of C8\n3. the thumb, middle finger, and 5th digit are within the C6, C7, and C8 dermatomes,\nrespectively\n4. the umbilicus is at the level of L2\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The spinal subarachnoid space normally\u2013",
+    [
+      "lies between the pachymeninx and the arachnoid",
+      "lies between the pia and the arachnoid",
+      "ends at the cauda equina",
+      "communicates with the peritoneal space",
+      "is adjacent to the vertebrae"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "A-delta and C peripheral afferent fibers\u2013\n1. terminate in laminas I and II of the dorsal horn\n2. convey the sensation of pain\n3. terminate in lamina V of the dorsal horn\n4. convey the sensation of light touch\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "In humans, the spinothalamic tract\u2013\n1. carries information from the ipsilateral side of the body\n2. exhibits topographic organization\n3. arises principally from neurons of the same side of the cord\n4. mediates information about pain and temperature\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The following are correct\u2013\n1. the diaphragm is innervated via the C3 and C4 roots\n2. the deltoid and triceps are innervated via the C5 root\n3. the biceps are innervated via the C5 root\n4. the gastrocnemius is innervated via the L4 root\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The dorsal spinocerebellar tract\u2013\n1. arises in the dorsal nucleus of Clarke and, above C8, in the accessory cuneate nucleus\n2. carries information arising in the muscle spindles, Golgi tendon organs, touch and pressure\nreceptors\n3. ascends to terminate in the cerebellar cortex\n4. projects without synapses to the basal ganglia and cerebellum\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The long-term consequences of a left hemisection of the spinal cord at midthoracic level would\ninclude\u2013\n1. loss of voluntary movement of the left leg\n2. loss of pain and temperature sensation in the right leg\n3. diminished position and vibration sense in the left leg\n4. diminished deep tendon reflexes in the left leg\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Gamma-efferent motor neurons\u2013\n1. are located in the intermedial lateral cell column of the spinal cord\n2. cause contraction of intrafusal muscle fibers\n3. provide vasomotor control to blood vessels in muscles\n4. are modulated by axons in the vestibulospinal tract\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The fibers carrying information from the spinal cord to the cerebellum\u2013\n1. can arise from Clarke's column cells (dorsal nucleus)\n2. represent the contralateral body half in the dorsal spinocerebellar tract\n3. can arise from cells of the external cuneate nucleus\n4. are important elements in the conscious sensation of joint position\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The spinal nerve roots\u2013\n1. exit below the corresponding vertebral bodies in the cervical spine\n2. exit above the corresponding vertebral bodies in the cervical spine\n3. exit above the corresponding vertebral bodies in the lower spine\n4. exit below the corresponding vertebral bodies in the lower spine\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The intermediolateral gray column\u2013\n1. contains preganglionic neurons for the autonomic nervous system\n2. is prominent in the thoracic region\n3. is prominent in upper lumbar regions\n4. is prominent in cervical regions\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Second-order neurons in the dorsal column system\u2013\n1. convey information about pain and temperature\n2. cross within the lemniscal decussation\n3. cross within the pyramidal decussation\n4. convey well-localized sensations of fine touch, vibration, two-point discrimination, and\nproprioception\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "In adults\u2013\n1. there is very little myelin in the spinal cord\n2. the dorsal columns and lateral columns are heavily myelinated\n3. the spinal cord terminates at the level of the S5 vertebrae\n4. the spinal cord terminates at the level of the L1 or L2 vertebra\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Large-diameter dorsal root axons of one side of L5 terminate in the\u2013\n1. marginal layer of the ipsilateral dorsal horn\n2. ipsilateral gracile nucleus\n3. ipsilateral cuneate nucleus\n4. ipsilateral dorsal nucleus (of Clarke)\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Inhibitory transmitters in the CNS include\u2013\n1. glutamate (presynaptic inhibition)\n2. GABA (presynaptic inhibition)\n3. glutamate (postsynaptic inhibition)\n4. GABA (postsynaptic inhibition)\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The dorsal column system of one side of the spinal cord\u2013\n1. is essential for normal two-point discrimination on that side\n2. arises from both dorsal root ganglion cells and dorsal horn neurons\n3. synapses on neurons of the ipsilateral gracile and cuneate nuclei\n4. consists primarily of large, myelinated, rapidly conducting axons\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The vagus (X) nerve contains\u2013\n1. visceral afferent fibers\n2. visceral efferent fibers\n3. branchial efferent fibers\n4. somatic efferent fibers\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Examination of a patient revealed a drooping left eyelid, together with weakness of adduction\nand elevation of the left eye, loss of the pupillary light reflex in the left eye, and weakness of\nthe limbs and lower facial muscles on the right side. A single lesion most likely to produce all\nthese signs would be located in the\u2013",
+    [
+      "medial region of the left pontomedullary junction",
+      "basomedial region of the left cerebral peduncle",
+      "superior region of the left mesencephalon",
+      "dorsolateral region of the medulla on the left side",
+      "periaqueductal gray matter on the left side"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Signs of upper-motor-neuron lesions include\u2013\n1. Babinski's sign\n2. hypoactive deep tendon reflexes and hyporeflexia\n3. spastic paralysis\n4. severe muscle atrophy\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Hemiplegia and sensory deficit on the right side of the body may be caused by infarction in\nthe territory of the\u2013",
+    [
+      "left middle cerebral artery",
+      "right anterior cerebral artery",
+      "left posterior cerebral artery",
+      "left superior cerebellar artery",
+      "anterior communicating artery"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The efferent axons of the cerebellar cortex arise from\u2013",
+    [
+      "Golgi cells",
+      "vestigial nucleus cells",
+      "granule cells",
+      "Purkinje cells",
+      "pyramidal cells"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Structures in the ventromedial regions of the medulla receive their blood supply from the\u2013",
+    [
+      "posterior spinal and superior cerebellar arteries",
+      "vertebral and anterior spinal arteries",
+      "posterior spinal and posterior cerebral arteries",
+      "posterior spinal and posterior inferior cerebellar arteries",
+      "posterior and anterior inferior cerebellar arteries"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "A neurologic syndrome is characterized by loss of pain and thermosensitivity on the left side of\nthe face and on the right side of the body from the neck down; partial paralysis of the soft\npalate, larynx, and pharynx on the left side; ataxia on the left side; and hiccuping. This\nsyndrome could be expected from infarction in the territory of the\u2013",
+    [
+      "basilar artery",
+      "right posterior inferior cerebellar artery",
+      "left posterior inferior cerebellar artery",
+      "right superior cerebellar artery",
+      "left superior cerebellar artery"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "A lesion in the nucleus of cranial nerve IV would produce a deficit in the\u2013",
+    [
+      "upward gaze of the ipsilateral eye",
+      "upward gaze of the contralateral eye",
+      "downward gaze of the contralateral eye",
+      "downward gaze of the ipsilateral eye"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Within the internal capsule, descending motor fibers for the face\u2013",
+    [
+      "are located in front of fibers for the arm, in the anterior part of the anterior limb",
+      "are located posterior to the fibers for the leg, in the posterior half of the posterior limb",
+      "are located in front of the fibers for the arm, in the anterior part of the posterior limb",
+      "travel within the corticovestibular tract",
+      "synapse in the capsular nucleus"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "If the oculomotor nerve (III) is sectioned, each of the following may result except for\u2013",
+    [
+      "partial ptosis",
+      "abduction of the eyeball",
+      "dilation of the pupil",
+      "impairment of lacrimal secretion",
+      "paralysis of the ciliary muscle"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Sensory input for taste is carried by\u2013\nposterior one third of the tongue, respectively\nposterior one third of the tongue, respectively",
+    [
+      "the vestibulocochlear (VIII) nerve",
+      "the facial (VII) nerve for the entire tongue",
+      "the facial (VII) and glossopharyngeal (IX) nerves for the anterior two thirds and",
+      "the glossopharyngeal (IX) and vagus (X) nerves for the anterior two thirds and"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "In central facial paralysis resulting from damage of the facial (VII) nucleus there is\u2013",
+    [
+      "paralysis of all ipsilateral facial muscles",
+      "paralysis of all contralateral facial muscles",
+      "paralysis of ipsilateral facial muscles except the buccinator",
+      "paralysis of all contralateral muscles except the buccinator",
+      "paralysis of contralateral facial muscles except the frontalis and orbicularis occuli"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "Cortical area 17\u2013\n1. is also termed the striate cortex\n2. is involved in the processing of auditory stimuli\n3. receives input from the lateral geniculate body\n4. receives input from the medial geniculate body\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Brodmann's area 4 corresponds to the\u2013",
+    [
+      "primary motor cortex",
+      "premotor cortex",
+      "Broca's area",
+      "primary sensory cortex",
+      "striate cortex"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "A healthy 25-year-old man had an episode of blurred vision in the left eye that lasted 2 weeks\nand then resolved. Six months later he developed difficulty walking. Examination showed\ndecreased visual acuity in the left eye, nystagmus, loss of vibratory sensation and position\nsense at the toes and knees bilaterally, and hyperactive deep tendon reflexes with a Babinski\nreflex on the right. Three years later, the man was admitted to the hospital with dysarthria,\nintention tremor of the left arm, and urinary incontinence. The clinical features are consistent\nwith\u2013\n1. myasthenia gravis\n2. a series of strokes\n3. a cerebellar tumor\n4. multiple sclerosis\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "In a stroke affecting the territory of the middle cerebral artery\u2013",
+    [
+      "weakness and sensory loss are most severe in the contralateral leg",
+      "weakness and sensory loss are most severe in the contralateral face and arm",
+      "weakness and sensory loss are most severe in the ipsilateral leg",
+      "weakness and sensory loss are most severe in the ipsilateral face and arm",
+      "akinetic mutism is often seen"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Within the cerebellum\u2013\n1. climbing fibers and mossy fibers carry afferent information\n2. Purkinje cells provide the primary output from the cerebellar cortex\n3. Purkinje cells project to the ipsilateral deep cerebellar nuclei\n4. efferents from the deep cerebellar nuclei project to the contralateral red nucleus and\nthalamic nuclei\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The striatum includes\u2013\n1. the caudate nucleus\n2. the globus pallidus\n3. the putamen\n4. the substantia nigra\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Sensory nuclei of the thalamus include\u2013\n1. lateral geniculate\n2. superior geniculate\n3. ventral posterior, lateral\n4. ventral anterior\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "In a patient with hemiparkinsonism (unilateral Parkinson's disease) affecting the right arm, a\nlesion is most likely in the\u2013",
+    [
+      "right subthalamic nucleus",
+      "left subthalamic nucleus",
+      "right substantia nigra",
+      "left substantia nigra",
+      "right globus pallidus",
+      "left globus pallidus"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "In a patient with a missile wound involving the left cerebral hemisphere, the following might\nbe expected\u2013\n1. dense neglect of stimuli on the left side\n2. hemiplegia involving the right arm and leg\n3. hemiplegia involving the left arm and leg\n4. aphasia\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Axon pathways that decussate before they terminate include the\u2013\n1. optic nerve (II) fibers from the temporal halves of the two retinas\n2. gracile fasciculus\n3. cuneate fasciculus\n4. olivocerebellar fibers\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "A 55-year-old patient presented with an 8-month history of gradually progressive\nincoordination in the right arm and leg. Examination revealed hypotonia and ataxia in the\nlimbs on the right side. The most likely diagnosis is\u2013\n1. a stroke\n2. a tumor\n3. in the left cerebellar hemisphere\n4. in the right cerebellar hemisphere\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The ventroposterior medial nucleus of the thalamus\u2013\n1. receives axons from neurons located in the contralateral cuneate nucleus in the medulla\n2. receives axons from neurons located in area 4 on the medial surface of the ipsilateral\ncerebral hemisphere\n3. contains neurons that respond to olfactory stimuli applied ipsilaterally\n4. contains neurons whose axons project to the somatosensory cortex of the ipsilateral\ncerebral hemisphere\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Lesions of the cerebral cortex on one side can result in a deficit in muscles innervated by the\u2013\n1. contralateral spinal motor neurons\n2. ipsilateral spinal motor neurons\n3. contralateral facial (VII) nerve\n4. ipsilateral facial (VII) nerve\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The solitary nucleus\u2013\n1. serves visceral functions, none of which are consciously perceived\n2. gives rise to preganglionic parasympathetic axons\n3. mediates pain arising from the heart during myocardial ischemia\n4. receives axons running with nerve VII\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "After transection of the peripheral nerve, the\u2013\n1. axons and Schwann cells distal to the cut undergo degeneration and disappear\n2. sensory axons distal to the cut survive, but motor axons degenerate\n3. motor neurons whose axons were cut degenerate and disappear\n4. surviving axons of the proximal stump will send out new growth cones to attempt\nregeneration\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "Wernicke's aphasia is usually caused by\u2013",
+    [
+      "a lesion in the superior temporal gyrus",
+      "a lesion in the inferior temporal gyrus",
+      "a lesion in the inferior frontal gyrus of the dominant hemisphere",
+      "lesions in the midbrain",
+      "alcohol abuse"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The trigeminal nuclear complex\u2013\n1. has somatic afferent components\n2. participates in certain reflex responses of cranial muscles\n3. has a branchial efferent component\n4. receives projections of axons coursing with nerve X\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "In a motor neuron at rest, an excitatory synapse produces an EPSP of 15 mV, and an\ninhibitory synapse produces an IPSP of 5 mV. If both the EPSP and IPSP occur simultaneously,\nthen the motor neuron would\u2013",
+    [
+      "depolarize by about 10 mV",
+      "depolarize by 20 mV",
+      "depolarize by more than 20 mV",
+      "change its potential by less than 1 mV"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Axons in the optic nerve originate from\u2013",
+    [
+      "rods and cones",
+      "retinal ganglion cells",
+      "amacrine cells",
+      "all of the above"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Meyer's loop carries optic radiation fibers representing\u2013",
+    [
+      "the upper part of the contralateral visual field",
+      "the lower part of the contralateral visual field",
+      "the upper part of the ipsilateral visual field",
+      "the lower part of the ipsilateral visual field"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Which of the following statements about the auditory system is not true?",
+    [
+      "the lateral lemniscus carries information from both ears",
+      "it has a major synaptic delay in the midbrain",
+      "it has a major synaptic delay in the thalamus",
+      "it has a major synaptic delay in the inferior olivary nucleus",
+      "crossing fibers pass through the trapezoid body"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "The hippocampal formation consists of the\u2013",
+    [
+      "dentate gyrus",
+      "hippocampus",
+      "subiculum",
+      "all of the above"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "A lesion of the right frontal cortex (area 8) produces\u2013",
+    [
+      "double vision (diplopia)",
+      "impaired gaze to the right",
+      "impaired gaze to the left",
+      "dilated pupils",
+      "no disturbances of the ocular motor system"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Which of the following is not part of the Papez circuit?",
+    [
+      "hippocampus",
+      "mamillary bodies",
+      "posterior thalamic nuclei",
+      "cingulate gyrus",
+      "parahippocampal gyrus"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Which of the following statements about the globus pallidus is not true?",
+    [
+      "it is located adjacent to the internal capsule",
+      "it receives excitatory axons from the caudate and putamen",
+      "it is the major outflow nucleus of the corpus striatum",
+      "it sends inhibitory axons to the thalamus"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Auditory stimuli normally cause impulses to pass through the\u2013\n1. trapezoid body\n2. inferior olivary nucleus\n3. medial geniculate nucleus\n4. medial lemniscus\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "Complex cells in the visual cortex have receptive fields that\u2013\nlocation in the visual field\nvisual field",
+    [
+      "are smaller than the receptive fields of simple cells",
+      "respond to lines or edges with a specific orientation, only when presented at one",
+      "respond to lines or edges with a specific orientation, presented anywhere within the",
+      "contain \"on\" or \"off\" centers"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "Parasympathetic fibers are carried in\u2013\n1. cranial nerves III and VII\n2. cranial nerves IX and X\n3. sacral roots S2\u20134\n4. thoracic roots T8\u201312\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Alzheimer's disease is characterized by\u2013\n1. neurofibrillary tangles\n2. loss of neurons in the basal forebrain (Meynert) nucleus\n3. senile plaques\n4. severe pathology in CA1\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The principal neurotransmitter(s) released by synaptic terminals of sympathetic axons is/are\u2013\n1. epinephrine\n2. norepinephrine\n3. acetylcholine\n4. gamma-aminobutyric acid\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Destruction of the lower cervical and upper thoracic ventral roots on the left side leads to\u2013\n1. dilated right pupil\n2. constricted right pupil\n3. dilated left pupil\n4. constricted left pupil\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    3,
+    "100questions"
+  ],
+  [
+    "The corticospinal tract passes through\u2013\n1. the internal capsule\n2. the crus cerebri\n3. the pyramids of the medulla\n4. the lateral and anterior columns of the spinal cord\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The extrastriate cortex\u2013\n1. is Brodmann's areas 18 and 19\n2. receives input from area 17\n3. is the visual association cortex\n4. is the primary auditory cortex\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "The Kl\u00fcver-Bucy syndrome\u2013\n1. is characterized by hyperorality and hypersexuality\n2. is characterized by psychic blindness and personality changes\n3. is seen in patients with bilateral temporal lobe lesions\n4. is seen in patients with lesions of the anterior thalamus\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    0,
+    "100questions"
+  ],
+  [
+    "Pain sensation\u2013\n1. is carried in large myelinated (A-alpha) axons\n2. is carried by small myelinated and unmyelinated (A-delta and C) axons\n3. is carried upward in the dorsal columns of the spinal cord\n4. is carried upward in the spinothalamic tract and spinoreticulothalamic system\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "The cerebrum consists of the\u2013",
+    [
+      "thalamus and basal ganglia",
+      "telencephalon and midbrain",
+      "telencephalon and diencephalon",
+      "brain stem and prosencephalon",
+      "cerebellum and prosencephalon"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "A 68-year-old teacher with hypertension complained of a severe headache and was taken to\nthe hospital. Examination revealed that he could write normally but could not read. His speech\nwas normal. The lesion(s) most likely involved the\u2013\n1. corpus callosum\n2. Broca's area\n3. left visual cortex\n4. left angular gyrus\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "A 68-year-old teacher with hypertension complained of a severe headache and was taken to\nthe hospital. Examination revealed that he could write normally but could not read. His speech\nwas normal. The lesion(s) most likely involved the corpus callosum and left visual cortex and\u2013\n1. the left anterior cerebral artery was probably involved\n2. there was probably a right homonymous hemianopia\n3. the left middle cerebral artery was probably involved\n4. the left posterior cerebral artery was probably involved\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    "A 54-year-old accountant, who worked until the day of his illness, was found on the floor, with\na right hemiparesis (arm and face more severely affected than the leg) and severe aphasia.\nThe diagnosis is most likely\u2013",
+    [
+      "a tumor involving the thalamus on the left",
+      "a large tumor of the left cerebral hemisphere",
+      "a stroke involving the right middle cerebral territory",
+      "a stroke involving the right anterior cerebral territory",
+      "a stroke involving the left middle cerebral territory",
+      "a stroke involving the left anterior cerebral territory"
+    ],
+    4,
+    "100questions"
+  ],
+  [
+    "The homunculus in the motor cortex\u2013\n1. contains magnified representations of the face and hand\n2. represents the face highest on the convexity of the hemisphere\n3. is located largely within the territory of the middle cerebral artery\n4. gives rise to all of the axons that descend as the corticospinal tract\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    1,
+    "100questions"
+  ],
+  [
+    "The optic chiasm\u2013\n1. is located close to the pineal and is often compressed by pineal tumors\n2. is located close to the pituitary and is often compressed by pituitary tumors\n3. contains decussating axons that arise in the temporal halves of the retinas\n4. contains decussating axons that arise in the nasal halves of the retinas\nIn the following question, select the single best answer.\nOne or more answers may be correct. Select\u2013",
+    [
+      "if 1, 2, and 3 are correct",
+      "if 1 and 3 are correct",
+      "if 2 and 4 are correct",
+      "if only 4 is correct",
+      "if all are correct"
+    ],
+    2,
+    "100questions"
+  ],
+  [
+    " One of the following is not derived from the neural crest:",
+    [
+      "a. Pia mater.",
+      "b. Arachnoid mater.",
+      "c. Dura mater.",
+      "d. Spinal ganglia.",
+      "e. Schwann cells."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " One of the following is not derived from the neural crest:",
+    [
+      "a. Dorsal root ganglia.",
+      "b. Suprarenal cortex.",
+      "c. Geniculate ganglion of the facial nerve.",
+      "d. Gracile tract.",
+      "e. Sympathetic chain."
+    ],
+    "b",
+    "mansoura"
+  ],
+  [
+    " The 3rd ventricle is the cavity of the:",
+    [
+      "a. Metencephalon.",
+      "b. Myelencephalon.",
+      "c. Mesencephalon.",
+      "d. Telencephalon.",
+      "e. Diencephalon."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " The lateral ventricle communicates with the 3rd ventricle through:",
+    [
+      "a. Aqueduct of Sylvius.",
+      "b. Foramen of Magendie.",
+      "c. Foramen of Monro.",
+      "d. Foramen of Luschka.",
+      "e. Central canal."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The presence of the following in the amniotic fluid indicates anencephaly:",
+    [
+      "a. Glucose.",
+      "b. Blood.",
+      "c. Lymphocytes.",
+      "d. Alpha fetoprotein.",
+      "e. None of the above."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Failure of the neural tube to close causes:",
+    [
+      "a. Hydrocephalus.",
+      "b. Anencephaly.",
+      "c. Meningocele.",
+      "d. All of the above.",
+      "e. None of the above."
+    ],
+    "b",
+    "mansoura"
+  ],
+  [
+    " Regarding spina bifida, one of the following is incorrect:",
+    [
+      "a. Usually occurs in the cervical region.",
+      "b. Spina bifida occulta is the commonest type.",
+      "c. May be associated with meningocele.",
+      "d. Is due to failure of fusion of the vertebral arches.",
+      "e. The spinal cord may project through the defect."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " Regarding the meningeal spaces:",
+    [
+      "a. Extradural hemorrhage is usually arterial.",
+      "b. Subdural hemorrhage is usually venous.",
+      "c. Subarachnoid hemorrhage is usually arterial.",
+      "d. All are correct.",
+      "e. a and b only are correct"
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " These nuclei are present in the floor of the 4th ventricle EXCEPT:",
+    [
+      "a. Abducent nucleus.",
+      "b. Facial nucleus in the facial colliculus.",
+      "c. Dorsal motor nucleus of the vagus.",
+      "d. Hypoglossal nucleus.",
+      "e. Vestibular nuclei."
+    ],
+    "b",
+    "mansoura"
+  ],
+  [
+    " One of the following is INCORRECT:",
+    [
+      "a. The superior cerebellar artery supplies the superior cerebellar peduncle.",
+      "b. The anterior inferior cerebellar artery supplies the middle cerebellar peduncle.",
+      "c. The posterior inferior cerebellar artery supplies the inferior cerebellar peduncle.",
+      "d. The anterior inferior cerebellar artery supplies the choroid plexus of the 3rd ventricle.",
+      "e. The posterior inferior cerebellar artery supplies the choroid plexus of the 4th ventricle."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The subarachnoid space:",
+    [
+      "a. Contains the cerebrospinal fluid.",
+      "b. Dilates in some areas to form the subarachnoid cisterns.",
+      "c. Subarachnoid hemorrhage is usually due to rupture of superficial cerebral veins.",
+      "d. All of the above are correct.",
+      "e. A and B only are correct."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " The subdural space:",
+    [
+      "a. Contains the cerebrospinal fluid.",
+      "b. Dilates in some areas to form the subarachnoid cisterns.",
+      "c. Subdural hemorrhage is usually due to rupture of superficial cerebral veins.",
+      "d. All of the above are correct.",
+      "e. A and B only are correct."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The lateral ventricle is the cavity of the:",
+    [
+      "a. Telencephalon.",
+      "b. Diencephalon.",
+      "c. Mesencephalon.",
+      "d. Rhombencephalon.",
+      "e. None of the above."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " The fourth ventricle is the cavity of the:",
+    [
+      "a. Telencephalon.",
+      "b. Diencephalon.",
+      "c. Mesencephalon.",
+      "d. Rhombencephalon.",
+      "e. None of the above."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Regarding the cerebellum, one of the following is INCORRECT:",
+    [
+      "a. It develops from the metencephalon.",
+      "b. The medullary center contains 4 deep cerebellar nuclei on each side.",
+      "c. The paleocerebellum is formed of the lateral zone of the cerebellar hemisphere.",
+      "d. The neocerebellum is connected with the cerebral cortex.",
+      "e. The flocculonodular lobe is connected with the vestibular system."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The central canal of the spinal cord opens out into the:",
+    [
+      "a. Subarachnoid space.",
+      "b. Lumbar cistern.",
+      "c. Sacral hiatus.",
+      "d. Third ventricle.",
+      "e. Fourth ventricle."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " One of the following is a branch of the basilar artery:",
+    [
+      "a. Anterior inferior cerebellar artery.",
+      "b. Posterior inferior cerebellar artery.",
+      "c. Anterior spinal artery.",
+      "d. Posterior spinal artery.",
+      "e. Radicular arteries to the cervical part of the spinal cord."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " Regarding the cerebellar arteries, one of the following is INCORRECT:",
+    [
+      "a. The superior cerebellar artery supplies the superior cerebellar peduncle.",
+      "b. The anterior inferior cerebellar artery supplies the middle cerebellar peduncle.",
+      "c. The posterior inferior cerebellar artery supplies the inferior cerebellar peduncle.",
+      "d. The anterior inferior cerebellar artery is a branch of the vertebral artery.",
+      "e. The posterior inferior cerebellar artery may give the posterior spinal artery."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " One of the following is a branch of the vertebral artery:",
+    [
+      "a. Anterior cerebral artery.",
+      "b. Anterior inferior cerebellar artery (AICA).",
+      "c. Posterior inferior cerebellar artery (PICA).",
+      "d. Superior cerebellar artery.",
+      "e. Posterior cerebral artery."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The brainstem is formed of:",
+    [
+      "a. Medulla oblongata.",
+      "b. Midbrain.",
+      "c. Pons.",
+      "d. All of the above.",
+      "e. None of the above."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The floor of the 4th ventricle is formed by the:",
+    [
+      "a. Superior medullary velum.",
+      "b. Inferior medullary velum.",
+      "c. Cerebellum.",
+      "d. Back of the medulla.",
+      "e. None of the above."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The primary fissure of the cerebellum separates the:",
+    [
+      "a. Superior surface from the inferior surface.",
+      "b. Anterior lobe from the posterior lobe.",
+      "c. Posterior lobe from the flocculonodular lobe.",
+      "d. Paleocerebellum from the neocerebellum.",
+      "e. None of the above."
+    ],
+    "b",
+    "mansoura"
+  ],
+  [
+    " The cerebellum is separated from the cerebral hemisphere by the:",
+    [
+      "a. Falx cerebri.",
+      "b. Falx cerebelli.",
+      "c. Tentorium cerebelli.",
+      "d. Galea aponeurotica.",
+      "e. fourthventricle."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The superior cerebellar peduncle connects the cerebellum with the:",
+    [
+      "a. Restiform body.",
+      "b. Inferior olive.",
+      "c. Medulla.",
+      "d. Midbrain.",
+      "e. Pons."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The rhombencephalon is made up of the:",
+    [
+      "a. Cerebrum and cerebellum.",
+      "b. Cerebrum, cerebellum and pons.",
+      "c. Cerebellum and thalamus.",
+      "d. Spinal cord, medulla and cerebellum.",
+      "e. Medulla, pons and cerebellum."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " The medulla is supplied by all of the following EXCEPT:",
+    [
+      "a. Anterior spinal artery.",
+      "b. Posterior spinal artery.",
+      "c. Anterior inferior cerebellar artery.",
+      "d. Posterior inferior cerebellar artery.",
+      "e. Branches from the vertebral artery."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " Multipolar neurons usually contain \ufffd\ufffd\ufffd axons:",
+    [
+      "a. 1.",
+      "b. 2.",
+      "c. 3.",
+      "d. 4.",
+      "e. 5."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " The medulla contains all the following features EXCEPT:",
+    [
+      "a. Hypoglossal trigone.",
+      "b. Clava.",
+      "c. Area postrema.",
+      "d. Facial colliculus.",
+      "e. Pyramidal decussation."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The facial colliculus is formed by the:",
+    [
+      "a. Facial nerve only.",
+      "b. Facial nucleus only.",
+      "c. Facial and vagus.",
+      "d. Facial nerve and abducent nucleus.",
+      "e. Facial and trigeminal."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The hypoglossal nerve exits from the:",
+    [
+      "a. Anterior median fissure.",
+      "b. Preolivary fissure.",
+      "c. Postolivary fissure.",
+      "d. Horizontal fissure.",
+      "e. Cerebellopontine angle."
+    ],
+    "b",
+    "mansoura"
+  ],
+  [
+    " In the midbrain, one of the following is INCORRECT:",
+    [
+      "a. The substantia nigra contains nerve cells that secrete dopamine.",
+      "b. The superior colliculi are visual reflex centers.",
+      "c. The inferior colliculi are auditory reflex centers.",
+      "d. The inferior brachium connects the inferior colliculus with the lateral geniculate body.",
+      "e. The aqueduct of Sylvius connects the third ventricle with the fourth ventricle."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " One of the following is not present in the interpeduncular fossa:",
+    [
+      "a. Tuber cinereum.",
+      "b. Infundibulum of the pituitary gland.",
+      "c. Mamillary bodies.",
+      "d. Posterior perforated substance.",
+      "e. Trochlear nerve."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " The anterior cerebral artery supplies all of the following EXCEPT:",
+    [
+      "a. Upper one inch of the parietal lobe.",
+      "b. Medial surface of the frontal lobe.",
+      "c. Anterior limb of the internal capsule.",
+      "d. Anterior part of the corpus striatum.",
+      "e. 0ccipital lobe."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " One of the following cortical areas of the brain is present in the parietal lobe:",
+    [
+      "a. Primary motor area (area 4).",
+      "b. Primary auditory area (area 41, 42).",
+      "c. Motor eye field area (area 8).",
+      "d. Primary visual area (area 17).",
+      "e. General sensory area (area 3, 1, 2)."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " This cortical area is present in the frontal lobe of the cerebral hemisphere:",
+    [
+      "a. Gustatory (taste) area (area 43).",
+      "b. Primary auditory area (areas 41 and 42).",
+      "c. Primary visual area (area 17).",
+      "d. Broca\ufffds area (motor speech area).",
+      "e. Somatosensory association area (area 5 and 7)."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Regarding the CSF, one of the following is INCORRECT:",
+    [
+      "a. The main volume is present in the ventricles of the brain.",
+      "b. The choroid plexus is the main site of production.",
+      "c. The arachnoid villi and granulations are the main site of absorption (drainage).",
+      "d. It reaches the subarachnoid space through the 3 foramina of the fourth ventricle.",
+      "e. It protects the brain and spinal cord."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " The epithalamus is formed of all of the following EXCEPT:",
+    [
+      "a. Pineal gland.",
+      "b. Habenular nucleus.",
+      "c. Anterior commissure.",
+      "d. Posterior commisure.",
+      "e. Stria medullaris thalami."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " The midbrain contains all of the following EXCEPT:",
+    [
+      "a. Crus cerebri.",
+      "b. Substantia nigra.",
+      "c. Third ventricle.",
+      "d. Oculomotor nerve nuclei.",
+      "e. Trochlear nerve nucleus."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " Regarding the cortical areas of the cerebral cortex, one is INCORRECT:",
+    [
+      "a. All the motor areas are present in the frontal lobe.",
+      "b. Broca\ufffds area is supplied b the middle cerebral artery.",
+      "c. The primary visual area (area 17) is supplied by the posterior cerebral artery.",
+      "d. The prefrontal cortex (frontal pole) contains the personality center.",
+      "e. The auditory association area (area 22) lies in the middle temporal gyrus."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " The lateral medullary syndrome is usually due to occlusion of the:",
+    [
+      "a. Anterior spinal artery.",
+      "b. Posterior spinal artery.",
+      "c. Anterior inferior cerebellar artery.",
+      "d. Posterior inferior cerebellar artery.",
+      "e. Posterior cerebral artery."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The medial medullary syndrome is due to occlusion of the:",
+    [
+      "a. Anterior cerebral artery.",
+      "b. Middle cerebral artery.",
+      "c. Posterior cerebral artery.",
+      "d. Anterior spinal artery.",
+      "e. Posterior spinal artery."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " The epithalamus:",
+    [
+      "a. Is part of the diencephalon.",
+      "b. Contains a gland that secretes melatonin.",
+      "c. Contains a nucleus that is part of the limbic system.",
+      "d. All of the above are correct.",
+      "e. a and b only are correct."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " All of the following are correct EXCEPT:",
+    [
+      "a. Area postrema is the vomiting center.",
+      "b. The tuber cinereum of the interpeduncular fossa is part of the hypothalamus.",
+      "c. The stria medullaris of the 4th ventricle are arcuatocerebellar fibers.",
+      "d. The stria medullaris thalami is part of the limbic system and the epithalamus.",
+      "e. Foramen of Megendie of the 4th ventricle is present in the superior medullary velum."
+    ],
+    "e",
+    "mansoura"
+  ],
+  [
+    " In the midbrain:",
+    [
+      "a. The two superior colliculi are connected by the anterior commissure.",
+      "b. The inferior brachium connects the inferior colliculus with the lateral geniculate body.",
+      "c. The substantia nigra contains nerve cells that secrete noradrenaline.",
+      "d. The posterior part (tectum) contains visual and auditory reflex centers.",
+      "e. The trochlear nerve exits from the interpeduncular fossa medial to the crus cerebri."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " Regarding the ventricular system, one of the following is INCORRECT:",
+    [
+      "a. The ependymal lining contributes to the formation and circulation of the CSF.",
+      "b. It represents the cavity of the neural tube.",
+      "c. It contains about 30 ml of CSF.",
+      "d. Obstruction of the aqueduct of Sylvius causes dilatation of all the ventricles.",
+      "e. Communicates with subarachnoid space through foramina of Luschka and Megendie."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Nuclei of the limbic system include all of the following EXCEPT:",
+    [
+      "a. Hippocampus.",
+      "b. Amygdaloid nucleus.",
+      "c. Mamillary body.",
+      "d. Caudate nucleus.",
+      "e. Anterior thalamic nucleus."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Language areas are located in all of the following EXCEPT:",
+    [
+      "a. Supramarginal gyrus.",
+      "b. Angular gyrus.",
+      "c. Superior temporal gyrus.",
+      "d. Middle frontal gyrus.",
+      "e. Inferior frontal gyrus."
+    ],
+    "d",
+    "mansoura"
+  ],
+  [
+    " Association fibers include all of the following EXCEPT:",
+    [
+      "a. Corpus callosum.",
+      "b. Superior longitudinal fasciculus.",
+      "c. Inferior longitudinal fasc iculus.",
+      "d. Cingulum.",
+      "e. Fasciculus uncinatus."
+    ],
+    "a",
+    "mansoura"
+  ],
+  [
+    " Regarding Corpus callosum all of the following are correct EXCEPT:",
+    [
+      "a. It connects similar cortical areas of the two hemispheres.",
+      "b. It is supplied by the anterior cerebral artery.",
+      "c. It is formed of association fibers.",
+      "d. It transmits information between the 2 hemispheres.",
+      "e. The posterior end is called the splenium."
+    ],
+    "c",
+    "mansoura"
+  ],
+  [
+    " One of the following arteries is not part of the circulus arteriosus:",
+    [
+      "a. Anterior cerebral artery.",
+      "b. Middle cerebral artery.",
+      "c. Posterior cerebral artery.",
+      "d. Anterior communicating artery.",
+      "e. Posterior communicating artery."
+    ],
+    "b",
+    "mansoura"
   ]
 ]
