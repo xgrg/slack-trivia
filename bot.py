@@ -32,6 +32,9 @@ def on_reply(payload, trivia):
 def on_next(payload, trivia):
     print('NEXT')
     data, sender = trivia.get_params(payload)
+    if not hasattr(trivia, 'table'):
+        trivia.table = get_users_table(trivia.webclient)
+
 
     user = get_user_id(trivia.webclient, 'goperto')
     args = data['text'].split('!next')[1]
@@ -41,8 +44,8 @@ def on_next(payload, trivia):
     print('TARGET: %s'%target)
     channel = get_channel_id(trivia.webclient, target)
 
-    if user != data['user']:
-        print('User %s not authorized'%trivia.table[sender])
+    #if user != data['user']:
+    #    print('User %s not authorized'%trivia.table[sender])
 
     if len(trivia.replies) == 0:
         msg = 'No answers to this question.'
@@ -106,7 +109,7 @@ def on_quizz(payload, trivia):
 
     trivia.pending_question = questions[qno]
     channel, ts = response['channel'], response['ts']
-    #trivia.dump()
+    trivia.dump()
 
 
 def on_ping(payload, trivia):

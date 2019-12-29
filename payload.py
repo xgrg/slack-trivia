@@ -115,7 +115,10 @@ def solve_question(question, replies):
         if has_correct:
             total_right = total_right + 1
     total_n = sum(list(counts.values()))
+    if not str(correct).isdigit():
+        correct = 'ABCDEFGH'.index(correct.upper())
     right = '*%s. %s*'%('ABCDEFGH'[correct], options[correct])
+
     pc = total_right/float(total_n)*100 if total_n != 0 else 'n/a'
 
     answers = []

@@ -1,13 +1,17 @@
 import schedule
 import time
-import os
+import os, json
 import slack
-import sys
+import aiohttp
+import sys, pickle
+import os.path as op
 from slack.errors import SlackApiError
 
 chan = ''
-if len(sys.argv) > 1:
-    chan = sys.argv[1]
+
+#if len(sys.argv) > 1:
+#    chan = sys.argv[1]
+chan = 'quizz'
 
 token = os.environ['TOKEN']
 
@@ -23,7 +27,13 @@ channel = 'DRZFMPSKA'
 client = slack.WebClient(token=token, timeout=30)
 
 def job():
-    global pending, channel, client, chan
+    global channel, client, chan
+    fp = '/tmp/trivia.dump'
+    pending = op.isfile(fp)
+    if pending:
+        backup = pickle.load(open(fp, 'rb'))
+        pending, replies, table = backup
+
     try:
         if pending:
             print('NEXT')
@@ -34,11 +44,15 @@ def job():
     except SlackApiError as e:
         print(e)
         return
+    except aiohttp.ClientError as e:
+        print(e)
+        time.sleep(5)
+        return
     pending = not pending
 
-#schedule.every(30).seconds.do(job)
-#schedule.every().day.at('10:00').do(job)
-schedule.every(2).hours.do(job)
+#schedule.every(40).seconds.do(job)
+schedule.every().day.at('10:00').do(job)
+#schedule.every(2).hours.do(job)
 #schedule.every().minute.do(job)
 #schedule.every().day.at("10:30").do(job)
 

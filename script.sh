@@ -1,5 +1,2 @@
-python cron.py quizz &
-while true; do
-  python quizz.py
-  echo "RESTART QUIZZ"
-done
+python forever cron.py &
+python forever quizz.py

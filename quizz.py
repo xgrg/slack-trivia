@@ -37,14 +37,14 @@ class Trivia():
         return data, sender
 
     def dump(self):
-        backup = [self.pending_question, self.replies]
+        backup = [self.pending_question, self.replies, self.table]
         pickle.dump(backup, open('/tmp/trivia.dump', 'wb'))
 
     def load(self):
         fp = '/tmp/trivia.dump'
         if op.isfile(fp):
             backup = pickle.load(open(fp, 'rb'))
-            pending_question, replies = backup
+            pending_question, replies, table = backup
             self.pending_question = pending_question
             self.replies = replies
 
