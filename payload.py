@@ -27,16 +27,7 @@ def create_question(text, options, author):
                 "color": "#36a64f",
                 "footer": "Question by <@%s>. Reply with a letter here or in private (or type !)."%author,
                 "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
-                #"pretext": "Optional pre-text that appears above the attachment block",
-                #"author_name": "author_name",
-                #"author_link": "http://flickr.com/bobby/",
-                #"author_icon": "https://placeimg.com/16/16/people",
-                #"title": "title",
-                #"title_link": "https://api.slack.com/",
-                #"text": "Optional `text` that appears within the attachment",
                 "fields": []
-                #"thumb_url": "http://placekitten.com/g/200/200",
-                #"ts": #123456789
             }
         ]
     }
@@ -55,12 +46,6 @@ def create_reply(text, options, correct, reply, author):
             "footer": "Question by <@%s>. Reply with a letter here or in private (or type !)."%author,
             "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
             "pretext": text,
-            #"author_name": "author_name",
-            #"author_link": "http://flickr.com/bobby/",
-            #"author_icon": "https://placeimg.com/16/16/people",
-            #"title": "title",
-            #"title_link": "https://api.slack.com/",
-            #"text": "Optional `text` that appears within the attachment",
             "fields": []}]
     }
     for each, letter in zip(options, 'ABCDEFGH'):
@@ -69,7 +54,7 @@ def create_reply(text, options, correct, reply, author):
     index = 'ABCDEFGH'.index(reply)
     attch = {"mrkdwn_in": ["text"],
         "color": "#36a64f",
-        "pretext": 'You replied: _%s. %s_'%('ABCDEFGH'[index], options[index])}
+        "text": 'You replied: _%s. %s_'%('ABCDEFGH'[index], options[index])}
     payload['attachments'].append(attch)
     if index == correct:
         attch = {"mrkdwn_in": ["text"],
@@ -79,7 +64,7 @@ def create_reply(text, options, correct, reply, author):
     else:
         attch = {"mrkdwn_in": ["text"],
             "color": "#36a64f",
-            "pretext": 'The right answer was: *%s. %s*'%('ABCDEFGH'[correct], options[correct])}
+            "text": 'The right answer was: *%s. %s*'%('ABCDEFGH'[correct], options[correct])}
         payload['attachments'].append(attch)
     return payload
 
@@ -105,21 +90,21 @@ def display_scores(scores, table):
     return payload
 
 def solve_question(question, replies):
+
     text, options, correct, author = question
     counts = {}
     total_right = 0
+
     for i, (user, has_correct, index) in enumerate(replies):
         opt = "ABCDEFGH"[index]
         counts.setdefault(opt, 0)
         counts[opt] = counts[opt] + 1
         if has_correct:
             total_right = total_right + 1
-    total_n = sum(list(counts.values()))
-    if not str(correct).isdigit():
-        correct = 'ABCDEFGH'.index(correct.upper())
-    right = '*%s. %s*'%('ABCDEFGH'[correct], options[correct])
 
-    pc = total_right/float(total_n)*100 if total_n != 0 else 'n/a'
+    total_n = sum(list(counts.values()))
+
+    pc = total_right / float(total_n)*100 if total_n != 0 else 'n/a'
 
     answers = []
     if pc != 'n/a':
@@ -133,12 +118,18 @@ def solve_question(question, replies):
             answers.append(option)
 
 
+    footer = "%s - %s answered right (%s %%)"\
+        %(' - '.join(answers), total_right, pc)
+
+    if not str(correct).isdigit():
+        correct = 'ABCDEFGH'.index(correct.upper())
+    right = '*%s. %s*'%('ABCDEFGH'[correct], options[correct])
+
     payload = {
         "text": 'Time is over. The right answer was: %s.'%right,
         "attachments": [
             {
-                "footer": "%s - %s answered right (%s %%)"%(' - '.join(answers), total_right, pc),
-
+                "footer": footer,
                 "mrkdwn_in": ["text"],
                 "color": "#36a64f",
                 "fields": []

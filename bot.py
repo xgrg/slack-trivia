@@ -35,7 +35,6 @@ def on_next(payload, trivia):
     if not hasattr(trivia, 'table'):
         trivia.table = get_users_table(trivia.webclient)
 
-
     user = get_user_id(trivia.webclient, 'goperto')
     args = data['text'].split('!next')[1]
     target = 'bottest'
@@ -43,9 +42,6 @@ def on_next(payload, trivia):
         target = args.strip(' ')
     print('TARGET: %s'%target)
     channel = get_channel_id(trivia.webclient, target)
-
-    #if user != data['user']:
-    #    print('User %s not authorized'%trivia.table[sender])
 
     if len(trivia.replies) == 0:
         msg = 'No answers to this question.'
@@ -80,13 +76,6 @@ def on_quizz(payload, trivia):
     data, sender = trivia.get_params(payload)
 
     trivia.table = get_users_table(trivia.webclient)
-    # user = get_user_id(trivia.webclient, "goperto")
-    # user1 = get_user_id(trivia.webclient, "quizzbot")
-    #
-    # if not sender in [user, user1]:
-    #     print(sender)
-    #     print('User %s not authorized'%trivia.table[sender])
-
     questions = json.loads(''.join(open('questions.json').read().split('\n')))
 
     qno = random.randrange(0, len(questions))
@@ -149,11 +138,13 @@ def on_create(payload, trivia):
 
     except Exception as e:
         print(e)
-        msg = 'Format error. Format: `!create` _type your question_ [_option1_, _option2_, _option3_, _option4_] _correct index_.'
+        msg = 'Format error. Format: `!create` _type your question_ [_option1_,'\
+            ' _option2_, _option3_, _option4_] _correct index_.'
         payload = {
             "text": msg,
             "attachments": [{
-                    "text": "Ex: `!create` _What is the best research group in the world? [VuMC, RCBB, CCRB, BBRC] 3_"
+                    "text": "Ex: `!create` _What is the best research group "\
+                        "in the world? [VuMC, RCBB, CCRB, BBRC] 3_"
                     }]
         }
         response = trivia.post(payload, sender)

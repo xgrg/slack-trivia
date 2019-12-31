@@ -7,6 +7,8 @@ from collections import OrderedDict
 import slack
 from bot import *
 
+su = ['U3RBQ239C', 'URZFFUNL8'] # superusers (goperto and quizzbot)
+
 class Trivia():
     pending_question = None
     replies = []
@@ -62,12 +64,14 @@ def on_message(**payload):
         return
 
     text = data['text'].strip(' ')
+    sender = data['user']
+
     if not trivia.pending_question is None:
         print('PENDING QUESTION DETECTED')
         if text.lower() in ['a', 'b', 'c', 'd', 'e', 'f']:
             on_reply(payload, trivia)
 
-        elif text.startswith('!next'):
+        elif text.startswith('!next') and sender in su:
             on_next(payload, trivia)
 
         elif text == '!':
@@ -75,14 +79,14 @@ def on_message(**payload):
 
     else:
         print('NO PENDING QUESTION')
-        if text.startswith('!quizz'):
+        if text.startswith('!quizz') and sender in su:
             on_quizz(payload, trivia)
 
     if text.startswith('!create'):
         on_create(payload, trivia)
         on_json(payload, trivia)
 
-    elif text.startswith('!json'):
+    elif text.startswith('!json') and sender in su:
         on_json(payload, trivia)
 
     else:

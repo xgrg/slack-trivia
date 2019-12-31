@@ -51,7 +51,7 @@ def job():
     pending = not pending
 
 #schedule.every(40).seconds.do(job)
-schedule.every().day.at('10:00').do(job)
+schedule.every().day.at('09:00').do(job)
 #schedule.every(2).hours.do(job)
 #schedule.every().minute.do(job)
 #schedule.every().day.at("10:30").do(job)
