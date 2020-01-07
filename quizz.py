@@ -49,6 +49,7 @@ class Trivia():
             pending_question, replies, table = backup
             self.pending_question = pending_question
             self.replies = replies
+            self.table = table
 
 
 
