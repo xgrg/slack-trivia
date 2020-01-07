@@ -48,6 +48,8 @@ def create_reply(text, options, correct, reply, author):
             "pretext": text,
             "fields": []}]
     }
+    if not str(correct).isdigit():
+        correct = 'ABCDEFGH'.index(correct.upper())
     for each, letter in zip(options, 'ABCDEFGH'):
         option = {'title': '%s. %s'%(letter, each), 'short': False}
         payload['attachments'][0]['fields'].append(option)
