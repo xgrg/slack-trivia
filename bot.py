@@ -1,36 +1,35 @@
 from payload import *
 from functions import *
-import json, random
+import json, random, string
 
 def on_reply(payload, trivia):
     data, sender = trivia.get_params(payload)
     print('REPLY from %s'%sender)
 
     reply = data['text'].upper()
-    index = 'ABCDEFGH'.index(reply)
+    index = string.ascii_uppercase.index(reply)
+
     text, options, correct, author = trivia.pending_question
 
-    if index > len(options):
+    if sender in [r[0] for r in trivia.replies]:
+        msg = 'Your answer was already registered. Please wait for the solution.'
+        response = trivia.post_text(msg, sender)
+        return
+    elif index > len(options) - 1:
         msg = 'Invalid answer. Please check possible options.'
         response = trivia.post_text(msg, sender)
 
         payload = create_question(text, options, author)
         response = trivia.post(payload, sender)
         return
-    elif sender in [r[0] for r in trivia.replies]:
-        msg = 'Your answer was already registered. Please wait for the solution.'
-        response = trivia.post_text(msg, sender)
-        return
 
-    if not str(correct).isdigit():
-        correct = 'ABCDEFGH'.index(correct.upper())
 
-    reply = create_reply(text, options, correct, reply, author)
-    r = [sender, index==correct, index]
+    rep = create_reply(text, options, correct, reply, author)
+    r = [sender, reply==correct, reply]
     trivia.replies.append(r)
     trivia.dump()
 
-    response = trivia.post(reply, sender)
+    response = trivia.post(rep, sender)
 
 def on_next(payload, trivia):
     print('NEXT')
@@ -97,7 +96,13 @@ def on_quizz(payload, trivia):
 
     response = trivia.post(payload, channel)
 
-    trivia.pending_question = questions[qno]
+    text, options, correct, author = questions[qno]
+    if str(correct).isdigit():
+        correct = string.ascii_uppercase[correct]
+    else:
+        correct = correct.upper()
+
+    trivia.pending_question = (text, options, correct, author)
     channel, ts = response['channel'], response['ts']
     trivia.dump()
 
@@ -123,17 +128,18 @@ def on_create(payload, trivia):
         question = text.split('[')[0]
         options = text[text.index('[') + 1: text.index(']')].split(',')
         correct = text[text.index(']') +1:].strip(' ')
-        try:
+        if str(correct).isdigit():
             index = int(correct)
-            correct = options[index]
-        except ValueError:
-            letters = ['a','b','c','d','e','f','g']
-            if correct.lower() in letters:
-                correct = options[letters.index(correct.lower())]
+            correct_text = options[index]
+        elif correct.upper() in string.ascii_uppercase and len(correct) == 1:
+            index = string.ascii_uppercase.index(correct.upper())
+            correct_text = options[index]
+        else:
+            raise Exception('Format error. (%s, %s)'%(correct, options))
         payload = create_question(question, options, sender)
 
-        letter = 'ABCDEFGH'[index]
-        msg = 'Correct answer is *%s. %s*'%(letter, correct)
+        letter = correct.upper()
+        msg = 'Correct answer is *%s. %s*'%(letter, correct_text)
         response = trivia.post(payload, sender)
         response = trivia.post_text(msg, sender)
 

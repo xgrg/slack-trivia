@@ -19,6 +19,8 @@ class Trivia():
         self.client = client
 
     def post(self, payload, channel):
+        print(payload)
+        print(payload['text'])
         response = self.webclient.chat_postMessage(as_user=True,
              channel=channel,
              text=payload['text'],
@@ -70,7 +72,7 @@ def on_message(**payload):
 
     if not trivia.pending_question is None:
         print('PENDING QUESTION DETECTED')
-        if text.lower() in ['a', 'b', 'c', 'd', 'e', 'f']:
+        if text.upper() in string.ascii_uppercase and len(text) == 1:
             on_reply(payload, trivia)
 
         elif text.startswith('!next') and sender in su:

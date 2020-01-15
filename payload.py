@@ -1,4 +1,4 @@
-
+import string
 # def create_action_question(text, options):
 #     payload = {
 #         "text": text,
@@ -31,15 +31,13 @@ def create_question(text, options, author):
             }
         ]
     }
-    for each, letter in zip(options, 'ABCDEFGH'):
+    for each, letter in zip(options, string.ascii_uppercase):
         option = {'title': '%s. %s'%(letter, each), 'short': False}
         payload['attachments'][0]['fields'].append(option)
     return payload
 
 def create_reply(text, options, correct, reply, author):
-    if not reply in 'ABCDEFGH' or not correct in 'ABCDEFGH':
-        print(reply, correct, 'should be both in ABCDEFGH')
-        return
+
 
     payload = {'text': 'The question was:',
         'attachments':
@@ -52,28 +50,33 @@ def create_reply(text, options, correct, reply, author):
             "fields": []}]
     }
 
-    for each, letter in zip(options, 'ABCDEFGH'):
+    for each, letter in zip(options, string.ascii_uppercase):
         option = {'title': '%s. %s'%(letter, each), 'short': False}
         payload['attachments'][0]['fields'].append(option)
 
-    index = 'ABCDEFGH'.index(reply)
-    if index > len(options):
-        return
+    index = string.ascii_uppercase.index(reply)
+    print(reply)
+    print(options[index])
 
     attch = {"mrkdwn_in": ["text"],
         "color": "#36a64f",
-        "text": 'You replied: _%s. %s_'%('ABCDEFGH'[index], options[index])}
+        "text": 'You replied: _%s. %s_'%(reply, options[index])}
+
     payload['attachments'].append(attch)
-    if index == correct:
+    if reply == correct:
         attch = {"mrkdwn_in": ["text"],
             "color": "#36a64f",
             "pretext": 'CORRECT!'}
         payload['attachments'].append(attch)
     else:
+        index = string.ascii_uppercase.index(correct)
+        print(correct)
+        print(options[index])
         attch = {"mrkdwn_in": ["text"],
             "color": "#36a64f",
-            "text": 'The right answer was: *%s. %s*'%('ABCDEFGH'[correct], options[correct])}
+            "text": 'The right answer was: *%s. %s*'%(correct, options[index])}
         payload['attachments'].append(attch)
+    print(payload)
     return payload
 
 def display_scores(scores, table):
@@ -104,10 +107,9 @@ def solve_question(question, replies):
     total_right = 0
     print(replies)
 
-    for i, (user, has_correct, index) in enumerate(replies):
-        opt = "ABCDEFGH"[index]
-        counts.setdefault(opt, 0)
-        counts[opt] = counts[opt] + 1
+    for i, (user, has_correct, reply) in enumerate(replies):
+        counts.setdefault(reply, 0)
+        counts[reply] = counts[reply] + 1
         if has_correct:
             total_right = total_right + 1
 
@@ -118,7 +120,7 @@ def solve_question(question, replies):
     answers = []
     if pc != 'n/a':
         for j in range(0, len(options)):
-            opt = "ABCDEFGH"[j]
+            opt = string.ascii_uppercase[j]
             n = 0
             if opt in list(counts.keys()):
                 n = counts[opt]
@@ -130,9 +132,10 @@ def solve_question(question, replies):
     footer = "%s - %s answered right (%s %%)"\
         %(' - '.join(answers), total_right, pc)
 
-    if not str(correct).isdigit():
-        correct = 'ABCDEFGH'.index(correct.upper())
-    right = '*%s. %s*'%('ABCDEFGH'[correct], options[correct])
+    #if not str(correct).isdigit():
+    #    correct = string.ascii_uppercase.index(correct.upper())
+    index = string.ascii_uppercase.index(correct)
+    right = '*%s. %s*'%(correct, options[index])
 
     payload = {
         "text": 'Time is over. The right answer was: %s.'%right,
