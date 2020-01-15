@@ -1,2 +1,2 @@
-python forever cron.py &
+python forever cron &
 python forever quizz.py

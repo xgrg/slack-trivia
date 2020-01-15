@@ -22,6 +22,9 @@ def on_reply(payload, trivia):
         response = trivia.post_text(msg, sender)
         return
 
+    if not str(correct).isdigit():
+        correct = 'ABCDEFGH'.index(correct.upper())
+
     reply = create_reply(text, options, correct, reply, author)
     r = [sender, index==correct, index]
     trivia.replies.append(r)
@@ -55,8 +58,6 @@ def on_next(payload, trivia):
             trivia.scores.setdefault(r[0], 0)
             if r[1]:
                 trivia.scores[r[0]] += 1
-
-
 
     payload = solve_question(trivia.pending_question, trivia.replies)
     response = trivia.post(payload, channel)
@@ -161,3 +162,21 @@ def on_json(payload, trivia):
     print('JSON')
     data, sender = trivia.get_params(payload)
     trivia.webclient.files_upload(file='questions.json', channels='@goperto')
+
+
+def on_scores(payload, trivia):
+    print('SCORES')
+    data, sender = trivia.get_params(payload)
+    if not hasattr(trivia, 'table'):
+        trivia.table = get_users_table(trivia.webclient)
+    payload = display_scores(trivia.scores, trivia.table)
+    response = trivia.post(payload, sender)
+
+
+
+def on_scores_reset(payload, trivia):
+    data, sender = trivia.get_params(payload)
+    from collections import OrderedDict
+    trivia.scores = OrderedDict()
+    trivia.dump()
+    trivia.post_text('Reset scores. Done.', sender)

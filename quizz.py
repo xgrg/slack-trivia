@@ -39,17 +39,18 @@ class Trivia():
         return data, sender
 
     def dump(self):
-        backup = [self.pending_question, self.replies, self.table]
+        backup = [self.pending_question, self.replies, self.table, self.scores]
         pickle.dump(backup, open('/tmp/trivia.dump', 'wb'))
 
     def load(self):
         fp = '/tmp/trivia.dump'
         if op.isfile(fp):
             backup = pickle.load(open(fp, 'rb'))
-            pending_question, replies, table = backup
+            pending_question, replies, table, scores = backup
             self.pending_question = pending_question
             self.replies = replies
             self.table = table
+            self.scores = scores
 
 
 
@@ -90,12 +91,18 @@ def on_message(**payload):
     elif text.startswith('!json') and sender in su:
         on_json(payload, trivia)
 
+    elif text.startswith('!scores') and sender in su:
+        on_scores(payload, trivia)
+
+    elif text.startswith('!scores_reset') and sender in su:
+        on_scores_reset(payload, trivia)
+
     else:
         print('ELSE')
         #print(payload)
 
-
-client = slack.RTMClient(token=token, auto_reconnect=True)
-trivia = Trivia(client)
-trivia.load()
-trivia.client.start()
+if __name__ == '__main__':
+    client = slack.RTMClient(token=token, auto_reconnect=True)
+    trivia = Trivia(client)
+    trivia.load()
+    trivia.client.start()

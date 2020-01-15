@@ -1,22 +1,22 @@
 
-def create_action_question(text, options):
-    payload = {
-        "text": text,
-        "attachments": [{
-                "text": "Please pick an answer.",
-                "fallback": "You are unable to play",
-                "callback_id": "wopr_game",
-                "color": "#3AA3E3",
-                "attachment_type": "default",
-                "actions": [] }]
-    }
-    for each in options:
-        option = {'name': 'game',
-                  'text': each,
-                  'type': 'button',
-                  'value': each}
-        payload['attachments'][0]['actions'].append(option)
-    return payload
+# def create_action_question(text, options):
+#     payload = {
+#         "text": text,
+#         "attachments": [{
+#                 "text": "Please pick an answer.",
+#                 "fallback": "You are unable to play",
+#                 "callback_id": "wopr_game",
+#                 "color": "#3AA3E3",
+#                 "attachment_type": "default",
+#                 "actions": [] }]
+#     }
+#     for each in options:
+#         option = {'name': 'game',
+#                   'text': each,
+#                   'type': 'button',
+#                   'value': each}
+#         payload['attachments'][0]['actions'].append(option)
+#     return payload
 
 def create_question(text, options, author):
     payload = {
@@ -37,6 +37,9 @@ def create_question(text, options, author):
     return payload
 
 def create_reply(text, options, correct, reply, author):
+    if not reply in 'ABCDEFGH' or not correct in 'ABCDEFGH':
+        print(reply, correct, 'should be both in ABCDEFGH')
+        return
 
     payload = {'text': 'The question was:',
         'attachments':
@@ -48,12 +51,15 @@ def create_reply(text, options, correct, reply, author):
             "pretext": text,
             "fields": []}]
     }
-    if not str(correct).isdigit():
-        correct = 'ABCDEFGH'.index(correct.upper())
+
     for each, letter in zip(options, 'ABCDEFGH'):
         option = {'title': '%s. %s'%(letter, each), 'short': False}
         payload['attachments'][0]['fields'].append(option)
+
     index = 'ABCDEFGH'.index(reply)
+    if index > len(options):
+        return
+
     attch = {"mrkdwn_in": ["text"],
         "color": "#36a64f",
         "text": 'You replied: _%s. %s_'%('ABCDEFGH'[index], options[index])}
@@ -96,6 +102,7 @@ def solve_question(question, replies):
     text, options, correct, author = question
     counts = {}
     total_right = 0
+    print(replies)
 
     for i, (user, has_correct, index) in enumerate(replies):
         opt = "ABCDEFGH"[index]
