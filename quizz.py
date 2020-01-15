@@ -93,10 +93,10 @@ def on_message(**payload):
     elif text.startswith('!json') and sender in su:
         on_json(payload, trivia)
 
-    elif text.startswith('!scores') and sender in su:
+    elif text == '!scores' and sender in su:
         on_scores(payload, trivia)
 
-    elif text.startswith('!scores_reset') and sender in su:
+    elif text == '!scores_reset' and sender in su:
         on_scores_reset(payload, trivia)
 
     else:
