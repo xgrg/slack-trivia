@@ -1,0 +1,48 @@
+#! /usr/bin/env python
+import schedule
+import time
+import slack
+import os
+from trivia import functions
+
+target = ''
+token = os.environ['TOKEN']
+bot = 'goperto'  # ID from the private conversation with the bot
+
+
+def post(text, channel, client):
+     response = client.chat_postMessage(as_user=True,
+          channel=channel,
+          text=text)
+     return response
+
+pending = False
+
+client = slack.WebClient(token=token, timeout=30)
+table = functions.get_users_table(client)
+bot_id = [k for k,v in list(table.items()) if v == bot][0]
+bot = functions.get_conversation_id(client, bot_id)
+
+
+def job():
+    global bot, client, target, pending
+    if pending:
+          print('NEXT')
+          res = post('!next %s'%target, bot, client)
+          print(res)
+    else:
+          print('QUIZZ')
+          res = post('!quizz %s'%target, bot, client)
+          print(res)
+
+    pending = not pending
+
+schedule.every(15).seconds.do(job)
+#schedule.every().day.at('09:00').do(job)
+#schedule.every(2).hours.do(job)
+#schedule.every().minute.do(job)
+#schedule.every().day.at("10:30").do(job)
+
+while 1:
+    schedule.run_pending()
+    time.sleep(1)
