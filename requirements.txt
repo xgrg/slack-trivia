@@ -1,2 +1,4 @@
 schedule
 slackclient
+coverage>=4.5
+coveralls

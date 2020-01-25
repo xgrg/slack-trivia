@@ -1,6 +1,10 @@
 
 import pickle
 import os.path as op
+import os
+import slack
+import string
+
 
 class Trivia():
     pending_question = None
@@ -8,22 +12,28 @@ class Trivia():
     scores = {}
     previous = None
 
-    def __init__(self, client):
-        self.client = client
+    def __init__(self, token):
+        self.client = slack.RTMClient(token=token, auto_reconnect=True)
 
     def post(self, payload, channel):
         print(payload)
         print(payload['text'])
-        response = self.webclient.chat_postMessage(as_user=True,
-             channel=channel,
-             text=payload['text'],
-             attachments=payload['attachments'])
+        kwargs = {'as_user':True,
+                  'channel':channel,
+                  'text':payload['text'],
+                  'attachments':payload['attachments']}
+        response = None
+        if not 'CI_TEST' in os.environ:
+            response = self.webclient.chat_postMessage(**kwargs)
         return response
 
     def post_text(self, text, channel):
-        response = self.webclient.chat_postMessage(as_user=True,
-             channel=channel,
-             text=text)
+        kwargs = {'as_user':True,
+                  'channel':channel,
+                  'text':text}
+        response = None
+        if not 'CI_TEST' in os.environ:
+            response = self.webclient.chat_postMessage(**kwargs)
         return response
 
     def get_params(self, payload):

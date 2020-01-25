@@ -1,8 +1,58 @@
-from . import payload as pl
-from . import functions as func
-import json, random, string
+from trivia import payload as pl
+from trivia import functions as func
+from trivia import bot
+import json, random, string, os, sys
 
 questions_fp = 'data/questions.json'
+su = ['U3RBQ239C', 'URZFFUNL8'] # superusers (goperto and quizzbot)
+
+def on_message(payload, trivia):
+    print('ON_MESSAGE')
+    print(trivia.pending_question)
+    data = payload['data']
+
+    if 'text' not in data:
+        print('text not in data')
+        return
+
+    text = data['text'].strip(' ')
+    sender = data['user']
+
+    if not trivia.pending_question is None:
+        print('PENDING QUESTION DETECTED')
+        if text.upper() in string.ascii_uppercase and len(text) == 1:
+            bot.on_reply(payload, trivia)
+
+        elif text.startswith('!next') and sender in su:
+            bot.on_next(payload, trivia)
+
+        elif text == '!':
+            bot.on_ping(payload, trivia)
+
+    else:
+        print('NO PENDING QUESTION')
+        if text.startswith('!quizz') and sender in su:
+            bot.on_quizz(payload, trivia)
+
+    if text.startswith('!create'):
+        bot.on_create(payload, trivia)
+        bot.on_json(payload, trivia)
+
+    elif text.startswith('!json') and sender in su:
+        bot.on_json(payload, trivia)
+
+    elif text == '!scores' and sender in su:
+        bot.on_scores(payload, trivia)
+
+    elif text == '!scores_reset' and sender in su:
+        bot.on_scores_reset(payload, trivia)
+
+    elif text == '!quit' and sender in su:
+        sys.exit(0)
+
+    else:
+        print('ELSE')
+        #print(payload)
 
 def on_reply(payload, trivia):
     data, sender = trivia.get_params(payload)
@@ -43,7 +93,9 @@ def on_next(payload, trivia):
     if len(args.strip(' ')) > 1:
         target = args.strip(' ')
     print('TARGET: %s'%target)
-    channel = func.get_channel_id(trivia.webclient, target)
+    channel = None
+    if not 'CI_TEST' in os.environ:
+        channel = func.get_channel_id(trivia.webclient, target)
 
     if len(trivia.replies) == 0:
         msg = 'No answers to this question.'
@@ -79,8 +131,8 @@ def on_next(payload, trivia):
 def on_quizz(payload, trivia):
     print('QUIZZ')
     data, sender = trivia.get_params(payload)
-
-    trivia.table = func.get_users_table(trivia.webclient)
+    if not hasattr(trivia, 'table'):
+        trivia.table = func.get_users_table(trivia.webclient)
     questions = json.loads(''.join(open(questions_fp).read().split('\n')))
 
     qno = random.randrange(0, len(questions))
@@ -97,8 +149,10 @@ def on_quizz(payload, trivia):
     target = 'bottest'
     if len(args.strip(' ')) > 1:
         target = args.strip(' ')
-    channel = func.get_channel_id(trivia.webclient, target)
 
+    channel = None
+    if not 'CI_TEST' in os.environ:
+        channel = func.get_channel_id(trivia.webclient, target)
     trivia.post(payload, channel)
 
     text, options, correct, author = questions[qno]
@@ -113,8 +167,8 @@ def on_quizz(payload, trivia):
 
 def on_ping(payload, trivia):
     print('PING')
-    data, sender = trivia.get_params(payload)
 
+    data, sender = trivia.get_params(payload)
     text, options, correct, author = trivia.pending_question
     payload = pl.create_question(text, options, author)
 
@@ -123,8 +177,10 @@ def on_ping(payload, trivia):
 
 def on_create(payload, trivia):
     print('CREATE')
+    print(payload)
     data, sender = trivia.get_params(payload)
-    if not hasattr(trivia, 'table'):
+
+    if not hasattr(trivia, 'table') and not 'CI_TEST' in os.environ:
         trivia.table = func.get_users_table(trivia.webclient)
 
     try:
@@ -162,7 +218,8 @@ def on_create(payload, trivia):
         return
 
     questions = json.loads(''.join(open(questions_fp).read().split('\n')))
-    questions.append([question, options, index, trivia.table[sender]])
+    if not 'CI_TEST' in os.environ:
+        questions.append([question, options, index, trivia.table[sender]])
     json.dump(questions, open(questions_fp, 'w'), indent=2)
     msg = 'Question has been correctly registered! Question #%s.'%len(questions)
     trivia.post_text(msg, sender)
@@ -171,20 +228,26 @@ def on_create(payload, trivia):
 def on_json(payload, trivia):
     print('JSON')
     data, sender = trivia.get_params(payload)
-    trivia.webclient.files_upload(file=questions_fp, channels='@goperto')
+    if not 'CI_TEST' in os.environ:
+        trivia.webclient.files_upload(file=questions_fp, channels='@goperto')
 
 
 def on_scores(payload, trivia):
     print('SCORES')
     data, sender = trivia.get_params(payload)
-    if not hasattr(trivia, 'table'):
+
+    table = {}
+    if not hasattr(trivia, 'table') and not 'CI_TEST' in os.environ:
         trivia.table = func.get_users_table(trivia.webclient)
-    payload = pl.display_scores(trivia.scores, trivia.table)
+        table = trivia.table
+
+    payload = pl.display_scores(trivia.scores, table)
     trivia.post(payload, sender)
 
 
 def on_scores_reset(payload, trivia):
     data, sender = trivia.get_params(payload)
-    trivia.scores = {}
+    if not 'CI_TEST' in os.environ:
+        trivia.scores = {}
     trivia.dump()
     trivia.post_text('Reset scores. Done.', sender)

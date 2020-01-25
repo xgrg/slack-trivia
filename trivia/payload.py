@@ -80,12 +80,10 @@ def display_scores(scores, table):
 
     for i, (user, sc) in enumerate(sorted_scores):
         a = '%s.\t'%(i + 1) if i == 0 or sc != old else '\t'
-        option = {'title': '%s%s (%s pts)'%(a, table[user], sc),
+        option = {'title': '%s%s (%s pts)'%(a, table.get(user, 'unknown'), sc),
             'short': False}
         old = sc
         payload['attachments'][0]['fields'].append(option)
-
-
     return payload
 
 def solve_question(question, replies):
