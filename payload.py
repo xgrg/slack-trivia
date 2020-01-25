@@ -1,22 +1,4 @@
 import string
-# def create_action_question(text, options):
-#     payload = {
-#         "text": text,
-#         "attachments": [{
-#                 "text": "Please pick an answer.",
-#                 "fallback": "You are unable to play",
-#                 "callback_id": "wopr_game",
-#                 "color": "#3AA3E3",
-#                 "attachment_type": "default",
-#                 "actions": [] }]
-#     }
-#     for each in options:
-#         option = {'name': 'game',
-#                   'text': each,
-#                   'type': 'button',
-#                   'value': each}
-#         payload['attachments'][0]['actions'].append(option)
-#     return payload
 
 def create_question(text, options, author):
     payload = {
@@ -36,8 +18,8 @@ def create_question(text, options, author):
         payload['attachments'][0]['fields'].append(option)
     return payload
 
-def create_reply(text, options, correct, reply, author):
 
+def create_reply(text, options, correct, reply, author):
 
     payload = {'text': 'The question was:',
         'attachments':
@@ -78,6 +60,7 @@ def create_reply(text, options, correct, reply, author):
         payload['attachments'].append(attch)
     print(payload)
     return payload
+
 
 def display_scores(scores, table):
     payload = {
