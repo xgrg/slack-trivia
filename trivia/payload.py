@@ -75,9 +75,14 @@ def display_scores(scores, table):
         ]
     }
 
-    for i, (user, sc) in enumerate(scores.items()):
-        option = {'title': '%s. %s (%s pts)'%(i+1, table[user], sc),
+    import operator
+    sorted_scores = sorted(scores.items(), key=operator.itemgetter(1), reverse=True)
+
+    for i, (user, sc) in enumerate(sorted_scores):
+        a = '%s.\t'%(i + 1) if i == 0 or sc != old else '\t'
+        option = {'title': '%s%s (%s pts)'%(a, table[user], sc),
             'short': False}
+        old = sc
         payload['attachments'][0]['fields'].append(option)
 
 
@@ -111,12 +116,9 @@ def solve_question(question, replies):
             option = '%s. %s (%s %%)'%(opt, n, n/float(total_n)*100)
             answers.append(option)
 
-
     footer = "%s - %s answered right (%s %%)"\
         %(' - '.join(answers), total_right, pc)
 
-    #if not str(correct).isdigit():
-    #    correct = string.ascii_uppercase.index(correct.upper())
     index = string.ascii_uppercase.index(correct)
     right = '*%s. %s*'%(correct, options[index])
 

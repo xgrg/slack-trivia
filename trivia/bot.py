@@ -1,7 +1,8 @@
-import payload as pl
-import functions as func
+from . import payload as pl
+from . import functions as func
 import json, random, string
 
+questions_fp = 'data/questions.json'
 
 def on_reply(payload, trivia):
     data, sender = trivia.get_params(payload)
@@ -48,13 +49,18 @@ def on_next(payload, trivia):
         msg = 'No answers to this question.'
         trivia.post_text(msg, channel)
     else:
-
+        is_first = True
         trivia.scores.setdefault(trivia.replies[0][0], 0)
         if trivia.replies[0][1]:
             trivia.scores[trivia.replies[0][0]] += 2
+            is_first = False
+
         for r in trivia.replies[1:]:
             trivia.scores.setdefault(r[0], 0)
             if r[1]:
+                if is_first:
+                    trivia.scores[r[0]] += 1
+                    is_first = False
                 trivia.scores[r[0]] += 1
 
     payload = pl.solve_question(trivia.pending_question, trivia.replies)
@@ -75,7 +81,7 @@ def on_quizz(payload, trivia):
     data, sender = trivia.get_params(payload)
 
     trivia.table = func.get_users_table(trivia.webclient)
-    questions = json.loads(''.join(open('questions.json').read().split('\n')))
+    questions = json.loads(''.join(open(questions_fp).read().split('\n')))
 
     qno = random.randrange(0, len(questions))
     while qno == trivia.previous:
@@ -155,9 +161,9 @@ def on_create(payload, trivia):
         trivia.post(payload, sender)
         return
 
-    questions = json.loads(''.join(open('questions.json').read().split('\n')))
+    questions = json.loads(''.join(open(questions_fp).read().split('\n')))
     questions.append([question, options, index, trivia.table[sender]])
-    json.dump(questions, open('questions.json', 'w'), indent=2)
+    json.dump(questions, open(questions_fp, 'w'), indent=2)
     msg = 'Question has been correctly registered! Question #%s.'%len(questions)
     trivia.post_text(msg, sender)
 
@@ -165,7 +171,7 @@ def on_create(payload, trivia):
 def on_json(payload, trivia):
     print('JSON')
     data, sender = trivia.get_params(payload)
-    trivia.webclient.files_upload(file='questions.json', channels='@goperto')
+    trivia.webclient.files_upload(file=questions_fp, channels='@goperto')
 
 
 def on_scores(payload, trivia):
@@ -179,7 +185,6 @@ def on_scores(payload, trivia):
 
 def on_scores_reset(payload, trivia):
     data, sender = trivia.get_params(payload)
-    from collections import OrderedDict
-    trivia.scores = OrderedDict()
+    trivia.scores = {}
     trivia.dump()
     trivia.post_text('Reset scores. Done.', sender)

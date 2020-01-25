@@ -2,9 +2,9 @@ import os
 import string
 token = os.environ['TOKEN']
 su = ['U3RBQ239C', 'URZFFUNL8'] # superusers (goperto and quizzbot)
-from trivia import Trivia
+from trivia.trivia import Trivia
 import slack
-import bot
+from trivia import bot
 
 
 @slack.RTMClient.run_on(event='message')

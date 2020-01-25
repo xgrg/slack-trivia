@@ -1,12 +1,11 @@
 
 import pickle
-from collections import OrderedDict
 import os.path as op
 
 class Trivia():
     pending_question = None
     replies = []
-    scores = OrderedDict()
+    scores = {}
     previous = None
 
     def __init__(self, client):
