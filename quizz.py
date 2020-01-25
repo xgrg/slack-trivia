@@ -99,6 +99,10 @@ def on_message(**payload):
     elif text == '!scores_reset' and sender in su:
         on_scores_reset(payload, trivia)
 
+    elif text == '!quit' and sender in su:
+        import sys
+        sys.exit(0)
+
     else:
         print('ELSE')
         #print(payload)
