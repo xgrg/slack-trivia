@@ -124,7 +124,7 @@ def on_next(payload, trivia):
 
     payload = pl.display_scores(trivia.scores, trivia.table)
     trivia.post(payload, channel)
-    msg = 'Next question later...'
+    msg = 'Next question will come later…'
     trivia.post_text(msg, channel)
 
 
@@ -236,10 +236,12 @@ def on_scores(payload, trivia):
     print('SCORES')
     data, sender = trivia.get_params(payload)
 
-    table = {}
-    if not hasattr(trivia, 'table') and not 'CI_TEST' in os.environ:
-        trivia.table = func.get_users_table(trivia.webclient)
-        table = trivia.table
+    if not hasattr(trivia, 'table'):
+        trivia.table = {}
+        if not 'CI_TEST' in os.environ:
+            trivia.table = func.get_users_table(trivia.webclient)
+
+    table = trivia.table
 
     payload = pl.display_scores(trivia.scores, table)
     trivia.post(payload, sender)
