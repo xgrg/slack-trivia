@@ -44,6 +44,9 @@ def on_message(payload, trivia):
     elif text == '!scores_reset' and sender_name in trivia.su:
         bot.on_scores_reset(payload, trivia)
 
+    elif text == '!table' and sender_name in trivia.su:
+        bot.on_table(payload, trivia)
+
     elif text == '!quit' and sender_name in trivia.su:
         sys.exit(0)
 
@@ -77,6 +80,12 @@ def on_reply(payload, trivia):
     r = [sender, reply==correct, reply]
     trivia.replies.append(r)
     trivia.post(rep, sender)
+
+def on_table(payload, trivia):
+    data, sender = trivia.get_params(payload)
+    sender_name = trivia.get_username(sender)
+    print('Next from %s (%s)'%(sender_name, sender))
+    trivia.post_text(str(trivia.table), sender)
 
 
 def on_next(payload, trivia):

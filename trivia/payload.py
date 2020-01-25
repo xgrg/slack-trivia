@@ -78,6 +78,7 @@ def display_scores(scores, table):
     import operator
     sorted_scores = sorted(scores.items(), key=operator.itemgetter(1), reverse=True)
 
+    old = None
     for i, (user, sc) in enumerate(sorted_scores):
         a = '%s.\t'%(i + 1) if i == 0 or sc != old else '\t'
         option = {'title': '%s%s (%s pts)'%(a, table.get(user, 'unknown'), sc),

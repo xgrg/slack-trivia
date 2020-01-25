@@ -1,8 +1,6 @@
 
-import os.path as op
 import os
 import slack
-import string
 from trivia import functions
 
 class Trivia():
@@ -47,7 +45,7 @@ class Trivia():
         return data, sender
 
     def get_user_id(self, name):
-        return [k for k,v in list(selt.table.items()) if v == name][0]
+        return [k for k,v in list(self.table.items()) if v == name][0]
 
     def get_username(self, id):
         return self.table[id]

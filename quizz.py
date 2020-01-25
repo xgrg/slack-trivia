@@ -3,7 +3,7 @@ import slack
 
 token = os.environ['TOKEN']
 questions_fp = 'data/questions.json'
-su = ['goperto'] # superuser
+su = ['goperto', 'quizzbot'] # superuser
 
 from trivia.trivia import Trivia
 from trivia import bot

@@ -16,6 +16,8 @@ class RunThemAll(unittest.TestCase):
         self.trivia = Trivia(token, questions_fp, su)
         client = slack.WebClient(token=token)
         self.trivia.table = functions.get_users_table(client)
+        id = self.trivia.get_user_id(su[0])
+        self.trivia.get_username(id)
 
 
     def test_001(self):
@@ -82,6 +84,8 @@ class RunThemAll(unittest.TestCase):
         payload['data']['text'] = '!scores_reset'
         bot.on_message(payload, self.trivia)
         payload['data']['text'] = '!json'
+        bot.on_message(payload, self.trivia)
+        payload['data']['text'] = '!table'
         bot.on_message(payload, self.trivia)
 
 

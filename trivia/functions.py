@@ -8,6 +8,14 @@ def get_channel_id(client, name):
             if e['name'] == name]
     return response[0]['id']
 
+def get_conversation_id(client, id):
+    #types=['public_channel','private_channel','mpim','im']
+    cl = client.conversations_list(types='im')
+    print(cl)
+    response = [e for e in cl.data['channels']\
+        if e['user'] == id]
+    return response[0]['id']
+
 
 def get_users_table(client):
     table = []
