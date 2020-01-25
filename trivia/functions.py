@@ -1,10 +1,3 @@
-def get_user_id(client, name):
-    ul = client.users_list()
-    response = [e for e in ul.data['members']\
-        if e['name'] == name]
-    return response[0]['id']
-
-
 def get_channel_id(client, name):
     gl = client.groups_list()
     response = [e for e in gl.data['groups']\

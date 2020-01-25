@@ -8,14 +8,14 @@ from trivia import bot, functions
 
 token = os.environ['TOKEN']
 questions_fp = 'data/questions.json'
+su = ['goperto']
 
 class RunThemAll(unittest.TestCase):
 
     def setUp(self):
-        self.trivia = Trivia(token)
+        self.trivia = Trivia(token, questions_fp, su)
         client = slack.WebClient(token=token)
         self.trivia.table = functions.get_users_table(client)
-        self.trivia.dump()
 
 
     def test_001(self):
@@ -81,12 +81,12 @@ class RunThemAll(unittest.TestCase):
         bot.on_message(payload, self.trivia)
         payload['data']['text'] = '!scores_reset'
         bot.on_message(payload, self.trivia)
-        self.trivia.load()
+        payload['data']['text'] = '!json'
+        bot.on_message(payload, self.trivia)
 
 
 
     def test_003(self):
         client = slack.WebClient(token=token)
-        functions.get_users_table(client)
-        functions.get_user_id(client, 'quizzbot')
+        #functions.get_users_table(client)
         functions.get_channel_id(client, 'general')

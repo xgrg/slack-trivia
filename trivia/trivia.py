@@ -1,10 +1,9 @@
 
-import pickle
 import os.path as op
 import os
 import slack
 import string
-
+from trivia import functions
 
 class Trivia():
     pending_question = None
@@ -12,8 +11,12 @@ class Trivia():
     scores = {}
     previous = None
 
-    def __init__(self, token):
+    def __init__(self, token, fp, su):
         self.client = slack.RTMClient(token=token, auto_reconnect=True)
+        client = slack.WebClient(token=token)
+        self.table = functions.get_users_table(client)
+        self.fp = fp
+        self.su = su
 
     def post(self, payload, channel):
         print(payload)
@@ -43,16 +46,8 @@ class Trivia():
         self.webclient = webclient
         return data, sender
 
-    def dump(self):
-        backup = [self.pending_question, self.replies, self.table, self.scores]
-        pickle.dump(backup, open('/tmp/trivia.dump', 'wb'))
+    def get_user_id(self, name):
+        return [k for k,v in list(selt.table.items()) if v == name][0]
 
-    def load(self):
-        fp = '/tmp/trivia.dump'
-        if op.isfile(fp):
-            backup = pickle.load(open(fp, 'rb'))
-            pending_question, replies, table, scores = backup
-            self.pending_question = pending_question
-            self.replies = replies
-            self.table = table
-            self.scores = scores
+    def get_username(self, id):
+        return self.table[id]
